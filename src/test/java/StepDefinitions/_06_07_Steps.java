@@ -1,20 +1,20 @@
 package StepDefinitions;
 
 import Pages.OrangePom;
-import Utilities.GWD;
+import Utilities.GWD_old;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-public class _06_07_AdminSteps {
+public class _06_07_Steps {
 
     OrangePom op = new OrangePom();
 
     @Given("Navigate to OrangeHRM")
     public void navigateToOrangeHRM() {
-        GWD.getDriver().get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        GWD_old.getDriver().get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 
     @When("Enter username and password and click login button")
