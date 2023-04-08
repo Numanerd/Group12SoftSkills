@@ -1,6 +1,5 @@
 package Pages;
-
-import Utilities.GWD;
+import Utilities.GWD_old;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -13,7 +12,7 @@ import java.time.Duration;
 
 public class Parent {
 
-    WebDriverWait wait=new WebDriverWait(GWD.getDriver(),
+    WebDriverWait wait=new WebDriverWait(GWD_old.getDriver(),
             Duration.ofSeconds(5));
 
     public void sendKeysFunction(WebElement element, String yazi)
@@ -33,13 +32,13 @@ public class Parent {
     public void verifyContainsTextFunction(WebElement element, String value){
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"No such TEXT");
-        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).perform();
+        new Actions(GWD_old.getDriver()).sendKeys(Keys.ESCAPE).perform();
         // açık dialog kutusu varsa kapansın
     }
 
 
     public void scrollToElement(WebElement element){
-        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
+        JavascriptExecutor js=(JavascriptExecutor) GWD_old.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 

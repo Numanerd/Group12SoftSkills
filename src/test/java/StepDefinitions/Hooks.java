@@ -1,7 +1,5 @@
 package StepDefinitions;
-
-import Utilities.ExcelUtility;
-import Utilities.GWD;
+import Utilities.GWD_old;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 
@@ -11,8 +9,6 @@ public class Hooks {
     public void after(Scenario senaryo){
 
             System.out.println("senaryo bitti");
-        ExcelUtility.writeExcel("src/test/java/ApachePOI/resource/ScenarioStatus.xlsx",
-                senaryo, GWD.threadBrowserGet());
 
 
         if (senaryo.isFailed()){
@@ -20,7 +16,7 @@ public class Hooks {
            //final byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
             //senaryo.attach(hafizadakiHali, "image/png","screen shot");
         }
-        GWD.quitDriver();
+        GWD_old.quitDriver();
 
     }
 }
