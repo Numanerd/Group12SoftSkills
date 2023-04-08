@@ -1,20 +1,19 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
-import Utility.GWD;
+import Utilities.GWD_old;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class _01_LoginSteps {
-
-    DialogContent dc = new DialogContent();
+    DialogContent dc=new DialogContent();
 
     @Given("Navigate to OpenSource")
     public void navigateToOpenSource() {
 
-        GWD.getDriver().get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        GWD.getDriver().manage().window().maximize();
+        GWD_old.getDriver().get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        GWD_old.getDriver().manage().window().maximize();
 
     }
 
@@ -36,18 +35,3 @@ public class _01_LoginSteps {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

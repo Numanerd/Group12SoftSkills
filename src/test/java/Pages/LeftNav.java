@@ -1,6 +1,6 @@
 package Pages;
 
-import Utility.GWD;
+import Utilities.GWD_old;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LeftNav extends Parent {
 
     public LeftNav() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD_old.getDriver(),this);
     }
     @FindBy(linkText = "Admin")
     public WebElement adminButton;

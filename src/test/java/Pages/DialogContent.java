@@ -1,7 +1,6 @@
 
 package Pages;
-
-import Utility.GWD;
+import Utilities.GWD_old;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class DialogContent extends Parent {
 
     public DialogContent() {
-        PageFactory.initElements(GWD.getDriver(), this);}
+        PageFactory.initElements(GWD_old.getDriver(), this);}
 
 
     @FindBy(name = "username")
@@ -33,6 +32,15 @@ public class DialogContent extends Parent {
     public WebElement addButton;
     @FindBy(css = "[class=\"oxd-text oxd-text--h6 orangehrm-main-title\"]")
     public WebElement addUserText;
+    @FindBy(xpath = "(//*[@class='oxd-input oxd-input--active'])[2]")
+    public WebElement username2;
+
+    @FindBy(xpath = "//*[text()='Already exists']")
+    public WebElement alreadyExists;
+
+    @FindBy(xpath = "//*[text()='Should be at least 5 characters']")
+    public WebElement fiveCharacters;
+
 
 
 
