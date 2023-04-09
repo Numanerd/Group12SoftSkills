@@ -71,6 +71,39 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//h6[@class='oxd-text oxd-text--h6 orangehrm-main-title']")
     public WebElement addUserDisplayed;
 
+    @FindBy(xpath = "//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']")
+    public WebElement invalid;
+
+    @FindBy(xpath = "//input[@placeholder='Type for hints...']")
+    public WebElement employeeName;
+
+    @FindBy(xpath = "(//*[@class='oxd-select-text-input'])[1]")
+    public WebElement userRole1;
+
+    @FindBy(xpath = "(//*[@class='oxd-select-text-input'])[2]")
+    public WebElement status1;
+
+    @FindBy(css = "[role='listbox'] > *")
+    public WebElement employee1;
+
+    @FindBy(xpath = "//*[@type='password']")
+    public WebElement password2;
+
+    @FindBy(xpath = "(//*[@class='oxd-grid-item oxd-grid-item--gutters'])[5]//input")
+    public WebElement confirm2;
+
+    @FindBy(xpath = "(//*[@class='oxd-input oxd-input--active'])[2]")
+    public WebElement usernameSearch;
+
+    @FindBy(css = "[class='orangehrm-header-container']~div span")
+    public WebElement editBut;
+
+    @FindBy(css = "[role='listbox']")
+    public WebElement listBox;
+
+    @FindBy(css = "[class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']")
+    public WebElement beforeSave;
+
 
 
 
