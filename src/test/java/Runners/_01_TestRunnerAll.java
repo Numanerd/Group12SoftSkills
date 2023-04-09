@@ -1,6 +1,7 @@
 package Runners;
 
 
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
@@ -8,5 +9,5 @@ import io.cucumber.testng.CucumberOptions;
 glue =("StepDefinitions"),
 dryRun = true
 )
-public class _01_TestRunnerAll {
+public class _01_TestRunnerAll extends AbstractTestNGCucumberTests {
 }
