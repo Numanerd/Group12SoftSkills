@@ -52,7 +52,8 @@ public class Login2 {
         dc.sendKeysFunction(dc.usernameDisplayed, "osman12345");
         dc.sendKeysFunction(dc.password2, "Deneme123.");
         dc.sendKeysFunction(dc.confirm2, "Deneme123.");
-
+        pt.wait.until(ExpectedConditions.invisibilityOf(dc.beforeSave));
+        dc.clickFunction(dc.saveButton);
 
     }
 
@@ -60,9 +61,9 @@ public class Login2 {
     public void verifyThatESSUserNameIsAddedOnTheList() {
 
 
-        pt.wait.until(ExpectedConditions.elementToBeClickable(dc.saveButton));
+        pt.wait.until(ExpectedConditions.elementToBeClickable(dc.submitButwait));
         dc.sendKeysFunction(dc.usernameSearch, "osman12345");
-        dc.clickFunction(dc.saveButton);
+        dc.clickFunction(dc.mainSubmit);
         pt.waitUntilVisible(dc.editBut);
         Assert.assertTrue(dc.editBut.isDisplayed());
 
