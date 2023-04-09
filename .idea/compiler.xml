@@ -6,11 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Group12SoftSkills" />
         <module name="Cucumber_Kursu5" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Group12SoftSkills" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
