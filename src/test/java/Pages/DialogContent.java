@@ -1,5 +1,6 @@
 
 package Pages;
+
 import Utilities.GWD_old;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 public class DialogContent extends Parent {
 
     public DialogContent() {
-        PageFactory.initElements(GWD_old.getDriver(), this);}
+        PageFactory.initElements(GWD_old.getDriver(), this);
+    }
 
 
     @FindBy(name = "username")
@@ -20,13 +22,13 @@ public class DialogContent extends Parent {
     @FindBy(css = "button[type='submit']")
     public WebElement loginButton;
 
-   @FindBy(xpath = "//h6[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module']")
+    @FindBy(xpath = "//h6[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module']")
     public WebElement txtDashboard;
 
-  @FindBy(xpath = "//button[text()=' Save ']")
+    @FindBy(xpath = "//button[text()=' Save ']")
     public WebElement saveButton;
 
-  @FindBy(xpath = "//span[@class=\"oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message\"]")
+    @FindBy(xpath = "//span[@class=\"oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message\"]")
     public WebElement rqrMessages;
     @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary']")
     public WebElement addButton;
@@ -104,10 +106,13 @@ public class DialogContent extends Parent {
     @FindBy(css = "[class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']")
     public WebElement beforeSave;
 
-    @FindBy(xpath ="//*[text()='Add User']")
-  public WebElement bossayfaclick;
+    @FindBy(xpath = "//*[text()='Add User']")
+    public WebElement bossayfaclick;
 
+    @FindBy(css = "[class='oxd-icon-button oxd-table-cell-action-space']")
+    public WebElement submitButwait;
 
-
+    @FindBy(css = "button[type='submit']")
+    public WebElement mainSubmit;
 
 }
