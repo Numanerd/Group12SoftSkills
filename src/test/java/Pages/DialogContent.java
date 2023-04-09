@@ -44,6 +44,34 @@ public class DialogContent extends Parent {
     public WebElement addbuttonpassword;
 
 
+    @FindBy(xpath = "(//div[@class='oxd-select-text-input'])[1]")
+    public WebElement userRoleDisplayed;
+
+    @FindBy(xpath = "//label[text()='Employee Name']")
+    public WebElement employeeNameDisplayed;
+
+    @FindBy(xpath = "(//div[@class='oxd-select-text-input'])[2]")
+    public WebElement statusDisplayed;
+
+    @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active oxd-input--error'])[1]")
+    public WebElement usernameDisplayed;
+
+    @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active oxd-input--error'])[2]")
+    public WebElement passwordDisplayed;
+
+    @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[2]")
+    public WebElement confirmDisplayed;
+
+    @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--ghost']")
+    public WebElement cancelBtnDisplayed;
+
+    @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']")
+    public WebElement saveBtnDisplayed;
+
+    @FindBy(xpath = "//h6[@class='oxd-text oxd-text--h6 orangehrm-main-title']")
+    public WebElement addUserDisplayed;
+
+
 
 
 }

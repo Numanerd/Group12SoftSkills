@@ -36,6 +36,11 @@ public class Parent {
         // açık dialog kutusu varsa kapansın
     }
 
+    public void elemnetDisplayed(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
+        scrollToElement(element);
+        Assert.assertTrue(element.isDisplayed());
+    }
 
     public void scrollToElement(WebElement element){
         JavascriptExecutor js=(JavascriptExecutor) GWD_old.getDriver();
@@ -49,4 +54,6 @@ public class Parent {
     public void waitUntilClickable(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+
+
 }
