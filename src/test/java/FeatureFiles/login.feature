@@ -2,13 +2,12 @@ Feature: Login Funcitonalty
 
   Background: Navigate to OrangeHRM
 
-    Given Navigate to OrangeHRm
-    When Enter username and passworD
-    Then click login buttonn
+    Given Navigate to OrangeHRM
+    When Enter username and password and click login button
+    And Navigate to Admin panel
+    And Click to Add Button
 
   Scenario: Navigate to Admin
 
-    Given Navigate to Admin page
-    When click on Add button
     Then enter an invalid name
     And verify that notification messages

@@ -54,7 +54,7 @@ public class login {
     public void enterAnInvalidName() {
 
         dc.sendKeysFunction(dc.employeeName,"asdasdafas");
-        dc.clickFunction(dc.usernameDisplayed);
+        dc.clickFunction(dc.bossayfaclick);
 
     }
 

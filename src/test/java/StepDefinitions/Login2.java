@@ -27,34 +27,10 @@ public class Login2 {
 
     }
 
-    @When("Enter username and password then click")
-    public void EnterUserNameAndPasswordThenClick() {
-
-        dc.sendKeysFunction(dc.username, "Admin");
-        dc.sendKeysFunction(dc.password, "admin123");
-        dc.clickFunction(dc.loginButton);
-
-    }
-
-    @Then("User should login successfully")
-    public void UserShouldLoginSuccessfully() {
-
-        dc.verifyContainsTextFunction(dc.txtDashboard, "Dashboard");
-
-    }
-
     @Given("User must click on Admin Feature")
     public void userMustBeClickOnAdminFeature() {
 
         ln.clickFunction(ln.adminButton);
-
-    }
-
-
-    @When("Click on Add Button")
-    public void clickOnAddButton() {
-
-        dc.clickFunction(dc.addButton);
 
     }
 
@@ -73,22 +49,10 @@ public class Login2 {
 
         pt.wait.until(ExpectedConditions.textToBePresentInElement(dc.employee1, "Odis"));
         dc.clickFunction(dc.listBox);
-
-
         dc.sendKeysFunction(dc.usernameDisplayed, "osman12345");
+        dc.sendKeysFunction(dc.password2, "Deneme123.");
+        dc.sendKeysFunction(dc.confirm2, "Deneme123.");
 
-
-        dc.sendKeysFunction(dc.password2, "Qwe123++");
-        dc.sendKeysFunction(dc.confirm2, "Qwe123++");
-
-
-    }
-
-    @And("Click on Save Button")
-    public void clickOnSaveButton() {
-
-        pt.wait.until(ExpectedConditions.invisibilityOf(dc.beforeSave));
-        dc.clickFunction(dc.saveButton);
 
     }
 
@@ -96,7 +60,7 @@ public class Login2 {
     public void verifyThatESSUserNameIsAddedOnTheList() {
 
 
-        pt.wait.until(ExpectedConditions.elementToBeClickable(dc.addButton));
+        pt.wait.until(ExpectedConditions.elementToBeClickable(dc.saveButton));
         dc.sendKeysFunction(dc.usernameSearch, "osman12345");
         dc.clickFunction(dc.saveButton);
         pt.waitUntilVisible(dc.editBut);

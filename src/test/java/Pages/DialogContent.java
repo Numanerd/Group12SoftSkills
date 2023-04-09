@@ -23,12 +23,12 @@ public class DialogContent extends Parent {
    @FindBy(xpath = "//h6[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module']")
     public WebElement txtDashboard;
 
-  @FindBy(xpath = "//Button[@type='submit']")
+  @FindBy(xpath = "//button[text()=' Save ']")
     public WebElement saveButton;
 
   @FindBy(xpath = "//span[@class=\"oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message\"]")
     public WebElement rqrMessages;
-    @FindBy(css = "[class='oxd-icon bi-plus oxd-button-icon']")
+    @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary']")
     public WebElement addButton;
     @FindBy(css = "[class=\"oxd-text oxd-text--h6 orangehrm-main-title\"]")
     public WebElement addUserText;
@@ -53,7 +53,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//div[@class='oxd-select-text-input'])[2]")
     public WebElement statusDisplayed;
 
-    @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active oxd-input--error'])[1]")
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[4]/div/div[2]/input")
     public WebElement usernameDisplayed;
 
     @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active oxd-input--error'])[2]")
@@ -86,10 +86,10 @@ public class DialogContent extends Parent {
     @FindBy(css = "[role='listbox'] > *")
     public WebElement employee1;
 
-    @FindBy(xpath = "//*[@type='password']")
+    @FindBy(xpath = "(//input[@type='password'])[1]")
     public WebElement password2;
 
-    @FindBy(xpath = "(//*[@class='oxd-grid-item oxd-grid-item--gutters'])[5]//input")
+    @FindBy(xpath = "(//input[@type='password'])[2]")
     public WebElement confirm2;
 
     @FindBy(xpath = "(//*[@class='oxd-input oxd-input--active'])[2]")
@@ -103,6 +103,9 @@ public class DialogContent extends Parent {
 
     @FindBy(css = "[class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']")
     public WebElement beforeSave;
+
+    @FindBy(xpath ="//*[text()='Add User']")
+  public WebElement bossayfaclick;
 
 
 

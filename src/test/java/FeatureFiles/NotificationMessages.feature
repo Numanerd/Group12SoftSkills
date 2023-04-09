@@ -2,8 +2,8 @@ Feature: Notification Messages
 
   Scenario: Check the Notification Messages
 
-    Given Navigate to OpenSource
-    When Enter username and password then click
+    Given Navigate to OrangeHRM
+    When Enter username and password and click login button
     Then User should login successfully
     Given Click on Admin Button
       When Click on Add Button
