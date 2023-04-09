@@ -40,6 +40,8 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "//*[text()='Should be at least 5 characters']")
     public WebElement fiveCharacters;
+    @FindBy(xpath = "(//input[@type='password'])[1]")
+    public WebElement addbuttonpassword;
 
 
 
