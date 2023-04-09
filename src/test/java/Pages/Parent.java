@@ -39,7 +39,7 @@ public class Parent {
 
     public void scrollToElement(WebElement element){
         JavascriptExecutor js=(JavascriptExecutor) GWD_old.getDriver();
-        js.executeScript("arguments[0].scrollIntoView();", element);
+        js.executeScript("arguments[0].scrollIntoView(false);", element);
     }
 
     public void waitUntilVisible(WebElement element){
