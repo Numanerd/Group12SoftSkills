@@ -68,6 +68,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']")
     public WebElement saveBtnDisplayed;
 
+    @FindBy(xpath = "//h6[@class='oxd-text oxd-text--h6 orangehrm-main-title']")
+    public WebElement addUserDisplayed;
+
 
 
 
